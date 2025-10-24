@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "plugins": ["@prettier/plugin-php"],
+  "phpVersion": "7.4",
+  "printWidth": 100,
+  "useTabs": true,
+  "tabWidth": 4,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "embeddedLanguageFormatting": "auto",
+  "overrides": [
+    { "files": ["*.json", "*.yml", "*.yaml"], "options": { "useTabs": false, "tabWidth": 2 } }
+  ]
+}

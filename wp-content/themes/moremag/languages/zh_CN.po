@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MoreMag\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-22 00:00+0000\n"
+"PO-Revision-Date: 2025-10-22 14:16+0000\n"
+"Last-Translator: Auto Generated\n"
+"Language-Team: 简体中文\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: moremag\n"
+"Plural-Forms: nplurals=1; plural=0;"
+
+#. Author of the theme
+msgid "AF themes"
+msgstr ""
+
+#: functions.php:45
+msgid "Breaking News"
+msgstr "快讯"
+
+#: functions.php:50
+msgid "Editor's Picks"
+msgstr "编辑精选"
+
+#. Author URI of the theme
+msgid "https://afthemes.com/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://afthemes.com/products/moremag/"
+msgstr ""
+
+#. Name of the theme
+msgid "MoreMag"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"MoreMag is a dynamic, magazine-focused WordPress child theme on MoreNews for "
+"bloggers, magazine publishers and news enthusiasts seeking editorial polish "
+"and merchandising options; it includes over 9 custom widgets and widget "
+"sections, customizable main banner options, header/footer builder support, "
+"light/dark reading modes, block patterns and WooCommerce compatibility for "
+"magazine shops or subscriptions, and works seamlessly with Gutenberg and "
+"Elementor; MoreMag is optimized for SEO, Core Web Vitals and speed, supports "
+"multilingual/RTL setups and provides a professional platform for building "
+"high-visibility magazine sites with strong monetization potential. https:"
+"//afthemes.com/products/moremag/"
+msgstr ""
+
+#: functions.php:49
+msgid "Subscribe"
+msgstr "订阅"
+
+#: functions.php:51
+msgid "Trending Now"
+msgstr "热门推荐"

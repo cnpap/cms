@@ -1,0 +1,16 @@
+# Ignore everything outside project-owned code
+node_modules/
+vendor/
+wp-admin/
+wp-includes/
+wp-content/uploads/
+wp-content/cache/
+wp-content/languages/
+wp-content/upgrade/
+wp-content/backup*/
+# Minified assets should not be reformatted
+*.min.js
+*.min.css
+# Locks
+package-lock.json
+composer.lock

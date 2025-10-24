@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Node & package managers
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+*.env
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Composer/vendor (if used)
+vendor/
+
+# WordPress sensitive config
+wp-config.php
+wp-config-local.php
+
+# WordPress runtime directories
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/*-cache/
+
+# WordPress logs
+wp-content/debug.log
+*.log
+
+# Sass cache
+.sass-cache/
