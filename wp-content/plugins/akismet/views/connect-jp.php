@@ -76,9 +76,10 @@
 				</span>
 				<?php esc_html_e('No worries! Get in touch and we&#8217;ll sort this out.', 'akismet'); ?>
 			</p>
-		<?php } else {<?php
-  	// ask do they want to use akismet account found using jetpack wpcom connection
-  	?>
+		<?php 
+	} 
+	else {
+		 ?>
 			<p><?php esc_html_e('Use your Jetpack connection to set up Akismet.', 'akismet'); ?></p>
 			<form name="akismet_use_wpcom_key" action="<?php echo esc_url(
    	Akismet_Admin::get_page_url(),

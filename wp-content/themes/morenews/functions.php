@@ -138,7 +138,12 @@ add_action('after_setup_theme', 'morenews_setup');
 
 function morenews_is_amp()
 {
-	return function_exists('is_amp_endpoint') && is_amp_endpoint();
+    // 避免直接引用未安装 AMP 插件时的函数符号
+    if (function_exists('is_amp_endpoint')) {
+        // 使用 call_user_func 以规避静态分析器的未定义函数告警
+        return (bool) call_user_func('is_amp_endpoint');
+    }
+    return false;
 }
 
 /**
@@ -385,18 +390,21 @@ function morenews_style_files()
 	/**
 	 * Load WooCommerce compatibility file.
 	 */
-	if (class_exists('WooCommerce')) {
-		wp_enqueue_style(
-			'morenews-woocommerce-style',
-			get_template_directory_uri() . '/woocommerce.css',
-		);
-
-		$font_path = WC()->plugin_url() . '/assets/fonts/';
-		$inline_font =
-			'@font-face {
-			font-family: "star";
-			src: url("' .
-			$font_path .
+    if (class_exists('WooCommerce')) {
+        wp_enqueue_style(
+            'morenews-woocommerce-style',
+            get_template_directory_uri() . '/woocommerce.css',
+        );
+        // 安全获取 WooCommerce 插件路径（避免直接调用未定义的 WC()）
+        $font_path_base = function_exists('WC')
+            ? call_user_func('WC')->plugin_url()
+            : plugins_url('/woocommerce');
+        $font_path = rtrim($font_path_base, '/') . '/assets/fonts/';
+        $inline_font =
+            '@font-face {
+            font-family: "star";
+            src: url("' .
+            $font_path .
 			'star.eot");
 			src: url("' .
 			$font_path .
@@ -665,6 +673,27 @@ function morenews_menu_notitle($menu)
 add_filter('wp_nav_menu', 'morenews_menu_notitle');
 add_filter('wp_page_menu', 'morenews_menu_notitle');
 add_filter('wp_list_categories', 'morenews_menu_notitle');
+
+/**
+ * Enable categories for Pages and adjust category archives.
+ * - Allows assigning core "category" taxonomy to the "page" post type
+ * - Makes category archives list Pages (not Posts)
+ */
+function morenews_enable_page_categories()
+{
+    // Attach built-in category taxonomy to Pages
+    register_taxonomy_for_object_type('category', 'page');
+}
+add_action('init', 'morenews_enable_page_categories');
+
+function morenews_category_archive_show_pages_only($query)
+{
+    // On category archive, show Pages instead of Posts
+    if (!is_admin() && $query->is_main_query() && $query->is_category()) {
+        $query->set('post_type', 'page');
+    }
+}
+add_action('pre_get_posts', 'morenews_category_archive_show_pages_only');
 
 function morenews_print_pre($args)
 {

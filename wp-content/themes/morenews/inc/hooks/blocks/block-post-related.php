@@ -7,7 +7,7 @@
 ?>
 
 <div class="promotionspace enable-promotionspace">
-    <div class="af-reated-posts morenews-customizer">
+    <!-- <div class="af-reated-posts morenews-customizer">
         <?php
         global $post;
         $morenews_categories = get_the_category($post->ID);
@@ -47,5 +47,5 @@
         wp_reset_postdata();
         ?>
             </div>
-    </div>
+    </div> -->
 </div>
