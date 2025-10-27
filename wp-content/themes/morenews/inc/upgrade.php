@@ -231,7 +231,7 @@ class MoreNews_Upgrade_Notice extends MoreNews_Notice
                 	'<h3> Greetings ' .
                 		esc_html($current_user->display_name) .
                 		'! Ready for an Upgrade? Unlock a Special Treat: 30% Off!</h3>',
-                	'<a href="https://afthemes.com/products/morenews/">MoreNews</a>',
+                	'<a href="https://opss.dev">MoreNews</a>',
                 	'<code class="coupon-code">AFT30</code>',
                 	'<strong>30% off</strong>',
                 );

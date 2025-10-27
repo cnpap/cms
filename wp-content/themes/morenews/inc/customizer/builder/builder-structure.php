@@ -359,7 +359,7 @@ if (!function_exists('athfb_render_copyright_element')) {
         <?php /* translators: 1: Theme name, 2: Theme author. */
         printf(
         	esc_html__('%1$s by %2$s.', 'morenews'),
-        	'<a href="https://afthemes.com/products/morenews/" target="_blank">MoreNews</a>',
+        	'<a href="https://opss.dev" target="_blank">MoreNews</a>',
         	'AF themes',
         ); ?>
 

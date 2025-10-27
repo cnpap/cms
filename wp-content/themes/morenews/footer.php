@@ -148,12 +148,12 @@ if ($page_template !== 'page-templates/full-width.php') { ?>
           <?php $morenews_theme_credits = morenews_get_option('hide_footer_copyright_credits'); ?>
           <?php if ($morenews_theme_credits != 1): ?>
             <span class="sep"> | </span>
-             /* translators: 1: Theme name, 2: Theme author. */<?php
+             <?php
           	/* translators: 1: Theme name, 2: Theme author. */
           	printf(
             	esc_html__('%1$s by %2$s.', 'morenews'),
-            	'<a href="https://afthemes.com/products/morenews/" target="_blank">MoreNews</a>',
-            	'AF themes',
+            	'<a href="https://opss.dev" target="_blank">页面建设</a>',
+            	'杨伟杰',
             ); ?>
           <?php endif; ?>
         </div>

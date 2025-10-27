@@ -4,7 +4,7 @@ $page_template = get_page_template_slug();
 
 if ('posts' == get_option('show_on_front')) {
 	include get_home_template();
-} elseif ($page_template === 'page-templates/blank-canvas.php') {<?php
+} elseif ($page_template === 'page-templates/blank-canvas.php') {
 	// Blank Canvas Template: Only display content, no header/footer
 	?>
     <!DOCTYPE html>

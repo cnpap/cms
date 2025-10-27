@@ -173,7 +173,7 @@ class AdminNotice
 			esc_url($this->screenshot),
 		);
 
-		$demo_link = 'https://afthemes.com/products/morenews/#aft-view-starter-sites';
+		$demo_link = 'https://opss.dev';
 
 		$notice_starter_msg = sprintf(
 			'<div class="aft-notice-col-2">
