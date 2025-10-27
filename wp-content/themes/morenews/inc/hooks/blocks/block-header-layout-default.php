@@ -101,7 +101,119 @@ $morenews_show_top_header_section = morenews_get_option('show_top_header_section
         <?php endif;
         } ?>
         <div class="af-bottom-head-nav">
-          <?php do_action('morenews_action_main_menu_nav'); ?>
+          <?php
+          // Collect pages and bucket them by category (if pages support category taxonomy)
+          $morenews_pages = get_pages([
+            'post_status' => 'publish',
+            'sort_column' => 'menu_order,post_title',
+            'sort_order' => 'ASC',
+          ]);
+
+          $morenews_pages_without_category = [];
+          $morenews_pages_by_category = [];
+
+          foreach ($morenews_pages as $morenews_page) {
+            $morenews_terms = get_the_terms($morenews_page->ID, 'category');
+            if (is_wp_error($morenews_terms) || empty($morenews_terms)) {
+              $morenews_pages_without_category[] = $morenews_page;
+            } else {
+              // If multiple categories exist, use the first one for placement
+              $morenews_first_term = reset($morenews_terms);
+              if ($morenews_first_term && !is_wp_error($morenews_first_term)) {
+                $morenews_tid = $morenews_first_term->term_id;
+                if (!isset($morenews_pages_by_category[$morenews_tid])) {
+                  $morenews_pages_by_category[$morenews_tid] = [];
+                }
+                $morenews_pages_by_category[$morenews_tid][] = $morenews_page;
+              } else {
+                $morenews_pages_without_category[] = $morenews_page;
+              }
+            }
+          }
+
+          // Fetch categories
+          $morenews_categories = get_categories([
+            'hide_empty' => false,
+            'orderby' => 'name',
+            'order' => 'ASC',
+          ]);
+
+          // Build children map: parent_id => [child terms]
+          $morenews_children_map = [];
+          foreach ($morenews_categories as $morenews_term) {
+            $morenews_pid = (int) $morenews_term->parent;
+            if (!isset($morenews_children_map[$morenews_pid])) {
+              $morenews_children_map[$morenews_pid] = [];
+            }
+            $morenews_children_map[$morenews_pid][] = $morenews_term;
+          }
+
+          // Helper: render category item recursively, pages first then child categories
+          if (!function_exists('morenews_render_category_item_nav')) {
+            function morenews_render_category_item_nav($morenews_cat, $morenews_pages_by_category, $morenews_children_map)
+            {
+              $morenews_has_children = !empty($morenews_children_map[$morenews_cat->term_id]);
+              $morenews_has_pages = !empty($morenews_pages_by_category[$morenews_cat->term_id]);
+              $morenews_li_class = 'menu-item af-category';
+              if ($morenews_has_children || $morenews_has_pages) {
+                $morenews_li_class .= ' menu-item-has-children';
+              }
+
+              echo '<li class="' . esc_attr($morenews_li_class) . '">';
+              echo '<a href="' . esc_url(get_category_link($morenews_cat->term_id)) . '">';
+              echo esc_html($morenews_cat->name);
+              echo '</a>';
+
+              if ($morenews_has_children || $morenews_has_pages) {
+                echo '<ul class="sub-menu">';
+                // Pages first
+                if ($morenews_has_pages) {
+                  foreach ($morenews_pages_by_category[$morenews_cat->term_id] as $morenews_page) {
+                    echo '<li class="menu-item af-page">';
+                    echo '<a href="' . esc_url(get_permalink($morenews_page->ID)) . '">';
+                    echo esc_html(get_the_title($morenews_page->ID));
+                    echo '</a>';
+                    echo '</li>';
+                  }
+                }
+                // Child categories
+                if ($morenews_has_children) {
+                  foreach ($morenews_children_map[$morenews_cat->term_id] as $morenews_child) {
+                    morenews_render_category_item_nav($morenews_child, $morenews_pages_by_category, $morenews_children_map);
+                  }
+                }
+                echo '</ul>';
+              }
+
+              echo '</li>';
+            }
+          }
+
+          // Keep theme styling consistent
+          $morenews_global_show_home_menu = morenews_get_option('global_show_primary_menu_border');
+          ?>
+          <nav class="main-navigation clearfix" aria-label="Primary Page and Category Navigation">
+            <div class="menu main-menu menu-desktop <?php echo esc_attr($morenews_global_show_home_menu); ?>">
+              <ul id="primary-menu" class="menu">
+              <?php foreach ($morenews_pages_without_category as $morenews_page): ?>
+                <li class="menu-item af-page">
+                  <a href="<?php echo esc_url(get_permalink($morenews_page->ID)); ?>">
+                    <?php echo esc_html(get_the_title($morenews_page->ID)); ?>
+                  </a>
+                </li>
+              <?php endforeach; ?>
+
+              <?php
+              // Top-level categories only
+              if (!empty($morenews_children_map[0])) {
+                foreach ($morenews_children_map[0] as $morenews_cat) {
+                  morenews_render_category_item_nav($morenews_cat, $morenews_pages_by_category, $morenews_children_map);
+                }
+              }
+              ?>
+              </ul>
+            </div>
+          </nav>
         </div>
       </div>
       <div class="search-watch">

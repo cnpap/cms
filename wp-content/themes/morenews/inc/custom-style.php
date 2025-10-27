@@ -425,8 +425,30 @@ if (!function_exists('morenews_custom_style')) {
         max-width: 100%;
         left: 0 !important;
         }
-<?php
-$css = ob_get_clean();
+
+        /* Offcanvas navigation submenu: remove animation and lighten shadow */
+        .offcanvas-navigaiton .main-navigation .menu ul ul {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.12) !important;
+        }
+        .offcanvas-navigaiton .main-navigation .menu .sub-menu,
+        .offcanvas-navigaiton .main-navigation .menu .children {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+        }
+        @media only screen and (max-width: 992px){
+        .offcanvas-navigaiton .main-navigation .menu-mobile li .sub-menu,
+        .offcanvas-navigaiton .main-navigation .menu-mobile li .children {
+        box-shadow: 0 3px 8px rgba(0,0,0,0.12) !important;
+        }
+        }
+        <?php
+        $css = ob_get_clean();
 
 // Minify CSS: remove comments, newlines, extra spaces
 $css = preg_replace('!/\*.*?\*/!s', '', $css); // Remove comments
