@@ -17,7 +17,7 @@ pnpm-debug.log*
 .idea/
 
 # Composer/vendor (if used)
-vendor/
+# vendor/
 
 # WordPress sensitive config
 wp-config.php
