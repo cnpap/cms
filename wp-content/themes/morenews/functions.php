@@ -677,7 +677,7 @@ add_filter('wp_list_categories', 'morenews_menu_notitle');
 /**
  * Enable categories for Pages and adjust category archives.
  * - Allows assigning core "category" taxonomy to the "page" post type
- * - Makes category archives list Pages (not Posts)
+ * - Keep category archives showing Posts (exclude Pages)
  */
 function morenews_enable_page_categories()
 {
@@ -688,9 +688,9 @@ add_action('init', 'morenews_enable_page_categories');
 
 function morenews_category_archive_show_pages_only($query)
 {
-    // On category archive, show Pages instead of Posts
+    // On category archive, ensure only Posts are listed (exclude Pages)
     if (!is_admin() && $query->is_main_query() && $query->is_category()) {
-        $query->set('post_type', 'page');
+        $query->set('post_type', 'post');
     }
 }
 add_action('pre_get_posts', 'morenews_category_archive_show_pages_only');

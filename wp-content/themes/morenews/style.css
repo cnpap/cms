@@ -10000,7 +10000,7 @@ figure.aligncenter {
 }
 .post-thumbnail.full-width-image.original img {
 	width: revert-layer;
-	margin: 0 20px;
+	/* margin: 0 20px; */
 	max-width: calc(100% - 40px);
 }
 

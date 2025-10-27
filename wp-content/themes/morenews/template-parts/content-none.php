@@ -8,7 +8,7 @@
  */
 ?>
 
-<section class="no-results not-found entry-header-details">
+<section class="no-results not-found entry-header-details" style="padding-bottom: 40px;">
 	<header class="header-title-wrapper">
 		<h1 class="page-title"><?php esc_html_e('Nothing Found', 'morenews'); ?></h1>
 	</header><!-- .header-title-wrapper -->
