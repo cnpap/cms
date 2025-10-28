@@ -2363,11 +2363,24 @@ footer.site-footer.data-bg::before,
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: #000;
-	opacity: 0.55;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.55) 100%);
+	opacity: 1 !important;
+	z-index: 0;
+	pointer-events: none;
 }
 .af-header-image.data-bg > div {
 	position: relative;
+	z-index: 1;
+}
+
+.aft-default-mode .af-middle-header.data-bg .site-title a,
+.aft-default-mode .af-middle-header.data-bg .site-description {
+	color: #ffffff !important;
+}
+.aft-default-mode .af-middle-header.data-bg .search-icon,
+.aft-default-mode .af-middle-header.data-bg #aft-dark-light-mode-wrap a,
+.aft-default-mode .af-middle-header.data-bg .custom-menu-link a {
+	color: #ffffff !important;
 }
 
 .header-image-default .af-header-image.data-bg {

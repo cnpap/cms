@@ -38,3 +38,5 @@ wp-content/debug.log
 
 # Sass cache
 .sass-cache/
+
+demo*
