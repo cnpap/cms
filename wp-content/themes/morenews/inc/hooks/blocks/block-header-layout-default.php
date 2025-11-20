@@ -134,8 +134,6 @@ $morenews_show_top_header_section = morenews_get_option('show_top_header_section
           // Fetch categories
           $morenews_categories = get_categories([
             'hide_empty' => false,
-            'orderby' => 'name',
-            'order' => 'ASC',
           ]);
 
           // Build children map: parent_id => [child terms]
@@ -146,6 +144,30 @@ $morenews_show_top_header_section = morenews_get_option('show_top_header_section
               $morenews_children_map[$morenews_pid] = [];
             }
             $morenews_children_map[$morenews_pid][] = $morenews_term;
+          }
+
+          $morenews_compare_terms = function ($a, $b) {
+            $oa = get_term_meta($a->term_id, 'category_order', true);
+            $ob = get_term_meta($b->term_id, 'category_order', true);
+            $na = is_numeric($oa);
+            $nb = is_numeric($ob);
+            if ($na && $nb) {
+              $da = intval($oa);
+              $db = intval($ob);
+              if ($da === $db) {
+                return strcasecmp($a->name, $b->name);
+              }
+              return $da < $db ? -1 : 1;
+            }
+            if ($na !== $nb) {
+              return $na ? -1 : 1;
+            }
+            return strcasecmp($a->name, $b->name);
+          };
+
+          foreach ($morenews_children_map as $morenews_pid => $morenews_children) {
+            usort($morenews_children, $morenews_compare_terms);
+            $morenews_children_map[$morenews_pid] = $morenews_children;
           }
 
           // Helper: render category item recursively, pages first then child categories

@@ -26,30 +26,30 @@ if (post_password_required()) {
  if (have_comments()): ?>
 		<h2 class="comments-title">
 			<?php
-   $comment_count = get_comments_number();
-   if (1 === $comment_count) {
-   	printf(
-   		/* translators: 1: title. */
-   		esc_html__('One thought on &ldquo;%1$s&rdquo;', 'morenews'),
-   		'<span>' . get_the_title() . '</span>',
-   	);
-   } else {
-   	printf(
-   		/* translators: 1: number of comments, 2: post title */
-   		esc_html(
-   			_nx(
-   				'%1$s thought on &ldquo;%2$s&rdquo;',
-   				'%1$s thoughts on &ldquo;%2$s&rdquo;',
-   				$comment_count,
-   				'comments title',
-   				'morenews',
-   			),
-   		),
-   		esc_html(number_format_i18n($comment_count)),
-   		'<span>' . get_the_title() . '</span>',
-   	);
-   }
-   ?>
+  $comment_count = get_comments_number();
+  if (1 === $comment_count) {
+  	printf(
+  		/* translators: 1: title. */
+			esc_html__('一条关于&ldquo;%1$s&rdquo;的评论', 'morenews'),
+  		'<span>' . get_the_title() . '</span>',
+  	);
+  } else {
+  	printf(
+  		/* translators: 1: number of comments, 2: post title */
+  		esc_html(
+  			_nx(
+				'%1$s 条评论：&ldquo;%2$s&rdquo;',
+				'%1$s 条评论：&ldquo;%2$s&rdquo;',
+  				$comment_count,
+  				'comments title',
+  				'morenews',
+  			),
+  		),
+  		esc_html(number_format_i18n($comment_count)),
+  		'<span>' . get_the_title() . '</span>',
+  	);
+  }
+  ?>
 		</h2><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
@@ -66,7 +66,7 @@ if (post_password_required()) {
 
   // If comments are closed and there are comments, let's leave a little note, shall we?
   if (!comments_open()): ?>
-			<p class="no-comments"><?php esc_html_e('Comments are closed.', 'morenews'); ?></p>
+			<p class="no-comments"><?php esc_html_e('评论已关闭。', 'morenews'); ?></p>
 		<?php endif;
   endif; // Check for have_comments().
 

@@ -3268,76 +3268,76 @@ msgstr "Free Live Chat using 3CX"
 #: inc/template-functions.php:565
 #: inc/template-functions.php:567
 msgid "Read more about %s"
-msgstr ""
+msgstr "阅读更多关于 %s"
 
 #: inc/template-functions.php:602
 msgid "Previous"
-msgstr ""
+msgstr "上一页"
 
 #: inc/template-functions.php:603
 msgid "Next"
-msgstr ""
+msgstr "下一页"
 
 #: inc/template-functions.php:728
 msgid "%s min read"
-msgstr ""
+msgstr "%s 分钟阅读"
 
 #: inc/template-functions.php:1010
 #: inc/template-functions.php:1148
 msgid "Copy link to clipboard"
-msgstr ""
+msgstr "复制链接到剪贴板"
 
 #: inc/template-functions.php:1010
 #: inc/template-functions.php:1148
 msgid "Link copied to clipboard!"
-msgstr ""
+msgstr "链接已复制到剪贴板！"
 
 #: inc/template-functions.php:1013
 #: inc/template-functions.php:1150
 msgid "Save this post"
-msgstr ""
+msgstr "收藏本文"
 
 #: inc/template-functions.php:1013
 #: inc/template-functions.php:1150
 msgid "Please log in to bookmark this post."
-msgstr ""
+msgstr "请登录以收藏本文。"
 
 #: inc/template-functions.php:1016
 #: inc/template-functions.php:1151
 msgid "Print this page"
-msgstr ""
+msgstr "打印此页面"
 
 #: inc/template-functions.php:1220
 msgid "%s views"
-msgstr ""
+msgstr "%s 次浏览"
 
 #: inc/template-functions.php:1324
 msgid "Love"
-msgstr ""
+msgstr "喜欢"
 
 #: inc/template-functions.php:1325
 msgid "Funny"
-msgstr ""
+msgstr "有趣"
 
 #: inc/template-functions.php:1326
 msgid "Wow"
-msgstr ""
+msgstr "惊讶"
 
 #: inc/template-functions.php:1327
 msgid "Sad"
-msgstr ""
+msgstr "伤心"
 
 #: inc/template-functions.php:1328
 msgid "Angry"
-msgstr ""
+msgstr "愤怒"
 
 #: inc/template-functions.php:1339
 msgid "Post Reactions"
-msgstr ""
+msgstr "文章反应"
 
 #: inc/template-functions.php:1543
 msgid "Support Author"
-msgstr ""
+msgstr "支持作者"
 
 #: inc/template-functions.php:1559
 msgid "About the Author"
@@ -3415,57 +3415,57 @@ msgstr "观看视频"
 #: inc/template-functions.php:1796
 #: inc/template-functions.php:1835
 msgid "Subscribe"
-msgstr ""
+msgstr "订阅"
 
 #: inc/template-functions.php:1772
 msgid "Watch Online"
-msgstr ""
+msgstr "在线观看"
 
 #: inc/template-functions.php:1782
 #: inc/template-functions.php:1806
 #: inc/template-functions.php:1912
 msgid "Global News"
-msgstr ""
+msgstr "全球新闻"
 
 #: inc/template-functions.php:1825
 #: inc/template-functions.php:1847
 msgid "Related News"
-msgstr ""
+msgstr "相关新闻"
 
 #: inc/template-functions.php:1866
 #: lib/tgm/class-tgm-plugin-activation.php:2286
 msgid "Recommended"
-msgstr ""
+msgstr "推荐"
 
 #: inc/template-functions.php:1868
 msgid "Archive"
-msgstr ""
+msgstr "归档"
 
 #: inc/template-functions.php:1872
 msgid "Opinion"
-msgstr ""
+msgstr "观点"
 
 #: inc/template-functions.php:1935
 msgid "Top News"
-msgstr ""
+msgstr "头条新闻"
 
 #: inc/template-functions.php:1954
 msgid "Hot News"
-msgstr ""
+msgstr "热点新闻"
 
 #: inc/template-tags.php:144
 #: inc/template-tags.php:226
 msgid "Published: "
-msgstr ""
+msgstr "发布于："
 
 #: inc/template-tags.php:146
 #: inc/template-tags.php:228
 msgid "Updated: "
-msgstr ""
+msgstr "更新于："
 
 #: inc/template-tags.php:265
 msgid "ago"
-msgstr ""
+msgstr "前"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:291
@@ -4200,203 +4200,203 @@ msgstr ""
 
 #: lib/info/info.php:192
 msgid "Upgrade Now"
-msgstr ""
+msgstr "立即升级"
 
 #: lib/tgm/class-tgm-plugin-activation.php:327
 msgid "Install Required Plugins"
-msgstr ""
+msgstr "安装必需的插件"
 
 #: lib/tgm/class-tgm-plugin-activation.php:328
 msgid "Install Plugins"
-msgstr ""
+msgstr "安装插件"
 
 #. translators: %s: plugin name.
 #: lib/tgm/class-tgm-plugin-activation.php:330
 msgid "Installing Plugin: %s"
-msgstr ""
+msgstr "正在安装插件：%s"
 
 #. translators: %s: plugin name.
 #: lib/tgm/class-tgm-plugin-activation.php:332
 msgid "Updating Plugin: %s"
-msgstr ""
+msgstr "正在更新插件：%s"
 
 #: lib/tgm/class-tgm-plugin-activation.php:333
 msgid "Something went wrong with the plugin API."
-msgstr ""
+msgstr "插件 API 发生错误。"
 
 #. translators: 1: plugin name(s).
 #: lib/tgm/class-tgm-plugin-activation.php:334
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "此主题需要以下插件：%1$s。"
+msgstr[1] "此主题需要以下插件：%1$s。"
 
 #. translators: 1: plugin name(s).
 #: lib/tgm/class-tgm-plugin-activation.php:340
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "此主题推荐以下插件：%1$s。"
+msgstr[1] "此主题推荐以下插件：%1$s。"
 
 #. translators: 1: plugin name(s).
 #: lib/tgm/class-tgm-plugin-activation.php:346
 msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
 msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "以下插件需要更新至最新版本，以确保与此主题的最大兼容性：%1$s。"
+msgstr[1] "以下插件需要更新至最新版本，以确保与此主题的最大兼容性：%1$s。"
 
 #. translators: 1: plugin name(s).
 #: lib/tgm/class-tgm-plugin-activation.php:352
 msgid "There is an update available for: %1$s."
 msgid_plural "There are updates available for the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "有可用更新：%1$s。"
+msgstr[1] "以下插件有可用更新：%1$s。"
 
 #. translators: 1: plugin name(s).
 #: lib/tgm/class-tgm-plugin-activation.php:358
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "以下必需插件当前未启用：%1$s。"
+msgstr[1] "以下必需插件当前未启用：%1$s。"
 
 #. translators: 1: plugin name(s).
 #: lib/tgm/class-tgm-plugin-activation.php:364
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "以下推荐插件当前未启用：%1$s。"
+msgstr[1] "以下推荐插件当前未启用：%1$s。"
 
 #: lib/tgm/class-tgm-plugin-activation.php:370
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "开始安装插件"
+msgstr[1] "开始安装插件"
 
 #: lib/tgm/class-tgm-plugin-activation.php:375
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "开始更新插件"
+msgstr[1] "开始更新插件"
 
 #: lib/tgm/class-tgm-plugin-activation.php:380
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "开始启用插件"
+msgstr[1] "开始启用插件"
 
 #: lib/tgm/class-tgm-plugin-activation.php:385
 msgid "Return to Required Plugins Installer"
-msgstr ""
+msgstr "返回必需插件安装程序"
 
 #: lib/tgm/class-tgm-plugin-activation.php:386
 #: lib/tgm/class-tgm-plugin-activation.php:830
 #: lib/tgm/class-tgm-plugin-activation.php:2543
 #: lib/tgm/class-tgm-plugin-activation.php:3590
 msgid "Return to the Dashboard"
-msgstr ""
+msgstr "返回仪表盘"
 
 #: lib/tgm/class-tgm-plugin-activation.php:387
 #: lib/tgm/class-tgm-plugin-activation.php:3169
 msgid "Plugin activated successfully."
-msgstr ""
+msgstr "插件已成功启用。"
 
 #: lib/tgm/class-tgm-plugin-activation.php:388
 #: lib/tgm/class-tgm-plugin-activation.php:2962
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "以下插件已成功启用："
+msgstr[1] "以下插件已成功启用："
 
 #. translators: 1: plugin name.
 #: lib/tgm/class-tgm-plugin-activation.php:390
 msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
+msgstr "未执行任何操作。插件 %1$s 已启用。"
 
 #. translators: 1: plugin name.
 #: lib/tgm/class-tgm-plugin-activation.php:392
 msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
-msgstr ""
+msgstr "插件未启用。此主题需要更高版本的 %s。请更新该插件。"
 
 #. translators: 1: dashboard link.
 #: lib/tgm/class-tgm-plugin-activation.php:394
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
+msgstr "所有插件已成功安装并启用。%1$s"
 
 #: lib/tgm/class-tgm-plugin-activation.php:396
 msgid "There are one or more required or recommended plugins to install, update or activate."
-msgstr ""
+msgstr "有一个或多个必需或推荐的插件需要安装、更新或启用。"
 
 #: lib/tgm/class-tgm-plugin-activation.php:397
 msgid "Please contact the administrator of this site for help."
-msgstr ""
+msgstr "请联系站点管理员以获得帮助。"
 
 #: lib/tgm/class-tgm-plugin-activation.php:522
 msgid "This plugin needs to be updated to be compatible with your theme."
-msgstr ""
+msgstr "该插件需要更新以与您的主题兼容。"
 
 #: lib/tgm/class-tgm-plugin-activation.php:523
 msgid "Update Required"
-msgstr ""
+msgstr "需要更新"
 
 #: lib/tgm/class-tgm-plugin-activation.php:939
 msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
-msgstr ""
+msgstr "远程插件包不包含具有所需别名的文件夹，且重命名未成功。"
 
 #: lib/tgm/class-tgm-plugin-activation.php:939
 #: lib/tgm/class-tgm-plugin-activation.php:942
 msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
-msgstr ""
+msgstr "请联系插件提供方，要求其按照 WordPress 指南打包插件。"
 
 #: lib/tgm/class-tgm-plugin-activation.php:942
 msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
-msgstr ""
+msgstr "远程插件包包含多个文件，但未将这些文件打包到一个文件夹中。"
 
 #: lib/tgm/class-tgm-plugin-activation.php:1131
 #: lib/tgm/class-tgm-plugin-activation.php:2958
 msgctxt "plugin A *and* plugin B"
 msgid "and"
-msgstr ""
+msgstr "和"
 
 #. translators: %s: version number
 #: lib/tgm/class-tgm-plugin-activation.php:1992
 msgid "TGMPA v%s"
-msgstr ""
+msgstr "TGMPA v%s"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2283
 msgid "Required"
-msgstr ""
+msgstr "必需"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2302
 msgid "WordPress Repository"
-msgstr ""
+msgstr "WordPress 仓库"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2305
 msgid "External Source"
-msgstr ""
+msgstr "外部来源"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2308
 msgid "Pre-Packaged"
-msgstr ""
+msgstr "预打包"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2325
 msgid "Not Installed"
-msgstr ""
+msgstr "未安装"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2329
 msgid "Installed But Not Activated"
-msgstr ""
+msgstr "已安装但未启用"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2331
 msgid "Active"
-msgstr ""
+msgstr "已启用"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2337
 msgid "Required Update not Available"
-msgstr ""
+msgstr "所需更新不可用"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2340
 msgid "Requires Update"
-msgstr ""
+msgstr "需要更新"
 
 #: lib/tgm/class-tgm-plugin-activation.php:2343
 msgid "Update recommended"

@@ -219,7 +219,7 @@ function cfdb7_init(){
 
             $nonce  = $_REQUEST['nonce'];
 
-            if ( ! wp_verify_nonce( $nonce, 'dnonce' ) ) wp_die('Invalid nonce..!!');
+            if ( ! wp_verify_nonce( $nonce, 'dnonce' ) ) wp_die('无效的安全令牌！');
 
             $csv->download_csv_file();
         }
@@ -243,19 +243,19 @@ function cfdb7_admin_notice() {
         return false;
     }
 
-    if ( ! get_option( 'cfdb7_view_ignore_notice' ) ) {
+    // if ( ! get_option( 'cfdb7_view_ignore_notice' ) ) {
 
-        echo '<div class="updated"><p>';
+    //     echo '<div class="updated"><p>';
 
-        printf(
-            __( 'Awesome, you\'ve been using <a href="admin.php?page=cfdb7-list.php">Contact Form CFDB7</a> for more than 1 week. May we ask you to give it a 5-star rating on WordPress? | <a href="%2$s" target="_blank">Ok, you deserved it</a> | <a href="%1$s">I already did</a> | <a href="%1$s">No, not good enough</a>', 
-		        'contact-form-cfdb7' 
-		    ), 
-            add_query_arg('cfdb7-ignore-notice', 0, admin_url()),
-            'https://wordpress.org/plugins/contact-form-cfdb7/'
-        );
-        echo "</p></div>";
-    }
+    //     printf(
+    //         __( '太棒了，您已使用 <a href="admin.php?page=cfdb7-list.php">Contact Form CFDB7</a> 超过 1 周。可以请您在 WordPress 上为它打个五星吗？ | <a href="%2$s" target="_blank">好的，去评分</a> | <a href="%1$s">我已经评过了</a> | <a href="%1$s">不了，还不够好</a>', 
+	//         'contact-form-cfdb7' 
+	//     ), 
+    //         add_query_arg('cfdb7-ignore-notice', 0, admin_url()),
+    //         'https://wordpress.org/plugins/contact-form-cfdb7/'
+    //     );
+    //     echo "</p></div>";
+    // }
 }
 
 function cfdb7_view_ignore_notice() {
@@ -272,7 +272,7 @@ function cfdb7_view_ignore_notice() {
  * @return array of links
  */
 function cfdb7_settings_link( $links ) {
-    $forms_link = '<a href="admin.php?page=cfdb7-list.php">' . __( 'Submissions', 'contact-form-cfdb7' ) . '</a>';
+    $forms_link = '<a href="admin.php?page=cfdb7-list.php">' . __( '提交记录', 'contact-form-cfdb7' ) . '</a>';
     array_unshift($links, $forms_link);
     return $links;
 }

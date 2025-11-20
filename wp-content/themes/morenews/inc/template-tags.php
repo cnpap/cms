@@ -148,17 +148,12 @@ if (!function_exists('morenews_post_item_meta')):
                     // $date_archive_link = get_day_link($year, $month, $day);
 
                     if ($morenews_date_display_setting == 'default-date') {
-                    	// Wrap the date in an anchor tag pointing to the archive
-                    	$date_format = get_option('date_format');
+                    	$date_format = 'Y 年 n 月 j 日';
                     	$posted_on_text = sprintf(
                     		__('Posted on %s', 'morenews'),
                     		get_the_time($date_format),
                     	);
-
-                    	// Create the link with translation-ready attributes
-                    	// echo '<a href="' . esc_url($date_archive_link) . '" aria-label="' . esc_attr($posted_on_text) . '">';
-                    	the_time($date_format); // This outputs the formatted date
-                    	// echo '</a>';
+                    	the_time($date_format);
                     } else {
                     	$time_ago = human_time_diff(get_the_time('U'), current_time('timestamp'));
                     	$time_ago_text = sprintf(

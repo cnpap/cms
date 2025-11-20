@@ -760,3 +760,45 @@ function athfb_init()
 	}
 }
 add_action('admin_init', 'athfb_init');
+
+function morenews_category_order_add_field()
+{
+    ?>
+    <div class="form-field">
+        <label for="morenews_category_order"><?php esc_html_e('排序', 'morenews'); ?></label>
+        <input name="morenews_category_order" id="morenews_category_order" type="number" min="0" step="1" value="" placeholder="例如：0、10、20" />
+        <p class="description">数值越小越靠前；留空按名称默认排序。</p>
+    </div>
+    <?php
+}
+add_action('category_add_form_fields', 'morenews_category_order_add_field');
+
+function morenews_category_order_edit_field($term)
+{
+    $value = get_term_meta($term->term_id, 'category_order', true);
+    ?>
+    <tr class="form-field">
+        <th scope="row"><label for="morenews_category_order"><?php esc_html_e('排序', 'morenews'); ?></label></th>
+        <td>
+            <input name="morenews_category_order" id="morenews_category_order" type="number" min="0" step="1" value="<?php echo esc_attr($value); ?>" placeholder="例如：0、10、20" />
+            <p class="description">数值越小越靠前；留空按名称默认排序。</p>
+        </td>
+    </tr>
+    <?php
+}
+add_action('category_edit_form_fields', 'morenews_category_order_edit_field');
+
+function morenews_category_order_save($term_id)
+{
+    if (isset($_POST['morenews_category_order'])) {
+        $raw = wp_unslash($_POST['morenews_category_order']);
+        $val = trim($raw);
+        if ($val === '') {
+            delete_term_meta($term_id, 'category_order');
+        } else {
+            update_term_meta($term_id, 'category_order', intval($val));
+        }
+    }
+}
+add_action('created_category', 'morenews_category_order_save', 10, 2);
+add_action('edited_category', 'morenews_category_order_save', 10, 2);

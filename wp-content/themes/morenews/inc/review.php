@@ -79,50 +79,6 @@ class MoreNews_Theme_Review_Notice
 			'/reviews/?filter=5#new-post';
 		?>
 
-        <div class="notice updated theme-review-notice" style="position:relative;">
-            <p>
-                <?php printf(
-                	/* Translators: %1$s current user display name. */
-                	esc_html__(
-                		'Howdy, %1$s! We\'ve noticed that you\'ve been using %2$s for some time now, we hope you are loving it! We would appreciate it if you can give us %3$sreview and rating%4$s on WordPress.org! We\'ll continue to develop exciting new features for free in the future by sharing the love!',
-                		'morenews',
-                	),
-                	'<strong>' . esc_html($current_user->display_name) . '</strong>',
-                	esc_html($theme_name),
-                	'<a href="' . esc_url($review_link) . '" target="_blank">',
-                	'</a>',
-                ); ?>
-            </p>
-
-            <div class="links">
-                <a href="<?php echo esc_url(
-                	$review_link,
-                ); ?>" class="btn button-primary" target="_blank">
-                    <span class="dashicons dashicons-thumbs-up"></span>
-                    <span><?php esc_html_e('Sure thing', 'morenews'); ?></span>
-                </a>
-
-                <a href="?nag_morenews_ignore_theme_review_notice_partially_v3=0" class="btn button-secondary">
-                    <span class="dashicons dashicons-calendar"></span>
-                    <span><?php esc_html_e('Remind me later', 'morenews'); ?></span>
-                </a>
-
-                <a href="?nag_morenews_ignore_theme_review_notice_v3=0" class="btn button-secondary">
-                    <span class="dashicons dashicons-smiley"></span>
-                    <span><?php esc_html_e('I\'ve already done.', 'morenews'); ?></span>
-                </a>
-
-                <a href="<?php echo esc_url(
-                	'https://afthemes.com/supports/',
-                ); ?>" class="btn button-secondary" target="_blank">
-                    <span class="dashicons dashicons-edit"></span>
-                    <span><?php esc_html_e('Got any support queries?', 'morenews'); ?></span>
-                </a>
-            </div>
-
-            <a class="notice-dismiss" style="text-decoration:none;" href="?nag_morenews_ignore_theme_review_notice_v3=0"></a>
-        </div>
-
         <?php
 	}
 

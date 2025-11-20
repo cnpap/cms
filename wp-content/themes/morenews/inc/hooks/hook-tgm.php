@@ -45,4 +45,8 @@ if (!function_exists('morenews_recommended_plugins')):
 	}
 endif;
 
-add_action('tgmpa_register', 'morenews_recommended_plugins');
+// 禁用主题插件推荐。如果需要重新启用，请在站点的自定义代码中添加：
+// add_filter('morenews_enable_plugin_recommendations', '__return_true');
+if (apply_filters('morenews_enable_plugin_recommendations', false)) {
+    add_action('tgmpa_register', 'morenews_recommended_plugins');
+}

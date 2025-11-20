@@ -78,3 +78,16 @@ if (!function_exists('moremag_print_secondary_css_var')) {
 	}
 }
 add_action('wp_head', 'moremag_print_secondary_css_var', 20);
+
+function moremag_remove_theme_menu()
+{
+    remove_menu_page('morenews');
+    remove_submenu_page('morenews', 'morenews');
+    remove_submenu_page('morenews', 'starter-sites');
+    remove_submenu_page('morenews', 'aft-template-kits');
+    remove_submenu_page('morenews', 'aft-block-patterns');
+    remove_submenu_page('morenews', 'customize.php');
+    remove_submenu_page('morenews', 'customize.php?autofocus[section]=header_builder');
+    remove_submenu_page('morenews', 'customize.php?autofocus[section]=footer_builder');
+}
+add_action('admin_menu', 'moremag_remove_theme_menu', 999);

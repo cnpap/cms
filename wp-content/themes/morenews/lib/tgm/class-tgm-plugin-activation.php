@@ -324,6 +324,14 @@ if (!class_exists('TGM_Plugin_Activation')) {
 				return;
 			}
 
+			// MoreNews customization: allow disabling TGMPA-driven plugin recommendations globally.
+			// If the filter returns false (default), TGMPA will not load any UI, notices or hooks.
+			// To re-enable, add in a custom plugin or theme snippet:
+			// add_filter('morenews_enable_plugin_recommendations', '__return_true');
+			if (!apply_filters('morenews_enable_plugin_recommendations', false)) {
+				return;
+			}
+
 			// Load class strings.
 			$this->strings = [
 				'page_title' => __('Install Required Plugins', 'morenews'),
@@ -341,8 +349,8 @@ if (!class_exists('TGM_Plugin_Activation')) {
 				),
 				'notice_can_install_recommended' => _n_noop(
 					/* translators: 1: plugin name(s). */
-					'This theme recommends the following plugin: %1$s.',
-					'This theme recommends the following plugins: %1$s.',
+					'此主题推荐以下插件：: %1$s.',
+					'此主题推荐以下插件：: %1$s.',
 					'morenews',
 				),
 				'notice_ask_to_update' => _n_noop(
@@ -2314,8 +2322,14 @@ if (!function_exists('tgmpa')) {
 	 * @param array $plugins An array of plugin arrays.
 	 * @param array $config  Optional. An array of configuration values.
 	 */
-	function tgmpa($plugins, $config = [])
-	{
+function tgmpa($plugins, $config = [])
+{
+		// MoreNews customization: short-circuit TGMPA registration when recommendations are disabled.
+		// To re-enable, add in a custom plugin or theme snippet:
+		// add_filter('morenews_enable_plugin_recommendations', '__return_true');
+		if (!apply_filters('morenews_enable_plugin_recommendations', false)) {
+			return;
+		}
 		$instance = call_user_func([get_class($GLOBALS['morenews']), 'get_instance']);
 
 		foreach ($plugins as $plugin) {
