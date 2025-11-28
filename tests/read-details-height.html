@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>read-details 高度测试</title>
+    <link rel="stylesheet" href="/wp-content/themes/morenews/style.css">
+    <style>
+      .test-wrapper { width: 700px; margin: 30px auto; border: 1px solid #ddd; padding: 12px; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+      .af-double-column.list-style { display: flex; align-items: flex-start; gap: 15px; }
+      .read-bg-img { width: 110px; height: 110px; background: #eee; }
+      .read-details { overflow: hidden; border: 1px dashed #ccc; padding: 0; /* 保证 clientHeight 更接近目标 */ }
+      .post-description { line-height: 19.75px; }
+      .result { margin-top: 16px; font-weight: 600; }
+      .pass { color: #0a7; }
+      .fail { color: #c00; }
+    </style>
+  </head>
+  <body>
+    <div class="test-wrapper">
+      <h3>保留新值</h3>
+      <div>
+        <div class="af-double-column list-style">
+          <div class="read-bg-img"></div>
+          <div class="read-details" id="now">
+            <div class="post-description">
+              为了验证主题调整后的文字显示区域是否增大，这里填充大量文本以产生溢出。为了验证主题调整后的文字显示区域是否增大，这里填充大量文本以产生溢出。为了验证主题调整后的文字显示区域是否增大，这里填充大量文本以产生溢出。为了验证主题调整后的文字显示区域是否增大，这里填充大量文本以产生溢出。为了验证主题调整后的文字显示区域是否增大，这里填充大量文本以产生溢出。
+            </div>
+          </div>
+        </div>
+        <div id="resNow" class="result">新容器检测中…</div>
+      </div>
+    </div>
+
+    <script>
+      (function(){
+        function inspect(id){
+          const el = document.getElementById(id);
+          const cs = getComputedStyle(el);
+          const lh = parseFloat(getComputedStyle(el.querySelector('.post-description')).lineHeight);
+          return {
+            max: cs.maxHeight,
+            client: el.clientHeight,
+            scroll: el.scrollHeight,
+            visibleLines: Math.round(el.clientHeight / lh)
+          };
+        }
+        const b = inspect('now');
+        // 固定输出格式
+        document.getElementById('resNow').textContent = '新值 —— max-height: ' + b.max + ' | clientHeight: ' + b.client + ' | 可见行数: ' + b.visibleLines;
+        document.getElementById('resNow').className = 'result';
+      })();
+    </script>
+  </body>
+</html>

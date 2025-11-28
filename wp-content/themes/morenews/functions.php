@@ -802,3 +802,11 @@ function morenews_category_order_save($term_id)
 }
 add_action('created_category', 'morenews_category_order_save', 10, 2);
 add_action('edited_category', 'morenews_category_order_save', 10, 2);
+
+/**
+ * Globally close comments (keep existing comments visible).
+ */
+add_filter('comments_open', function ($open, $post_id) {
+    return false;
+}, 100, 2);
+add_filter('pings_open', '__return_false', 100);
