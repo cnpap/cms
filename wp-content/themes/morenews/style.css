@@ -6413,7 +6413,7 @@ iframe.af-hide-iframe {
 	padding-left: 10px;
 }
 .af-wrapper .af-banner-carousel .read-img.read-bg-img {
-	height: 250px;
+    height: 200px;
 }
 
 /*two sliders carousel---*/
@@ -6435,7 +6435,8 @@ iframe.af-hide-iframe {
 	padding: 0 5px;
 }
 .af-banner-carousel .read-img.read-bg-img {
-	height: 440px;
+    height: unset;
+    aspect-ratio: 16/9;
 }
 .aft-banner-layout-7 .af-banner-carousel {
 	height: unset;
@@ -6490,7 +6491,7 @@ iframe.af-hide-iframe {
 .morenews_tabbed_posts_widget .af-double-column.list-style .read-details,
 .trending-posts-vertical .af-double-column.list-style .read-details,
 .af-double-column.list-style .read-details {
-	max-height: 110px;
+    max-height: 160px;
 	overflow: hidden;
 	width: calc(100% - 110px);
 }
@@ -11464,12 +11465,12 @@ article.latest-posts-grid .read-title h3,
 		height: 110px;
 		width: 110px;
 	}
-	.aft-banner-layout-2
-		.banner-vertical-slider
-		.aft-trending-posts.list-part
-		.af-double-column.list-style
-		.read-details {
-		max-height: 110px;
+    .aft-banner-layout-2
+        .banner-vertical-slider
+        .aft-trending-posts.list-part
+        .af-double-column.list-style
+        .read-details {
+        max-height: 160px;
 		width: calc(100% - 110px);
 	}
 	.af-main-banner-thumb-posts .read-single:not(.af-cat-widget-carousel) .read-img.read-bg-img {
@@ -11515,13 +11516,13 @@ article.latest-posts-grid .read-title h3,
 		height: 110px;
 		max-width: 110px;
 	}
-	.aft-main-banner-section.aft-banner-layout-3
-		.banner-vertical-slider
-		.aft-trending-posts.list-part
-		.af-double-column.list-style
-		.read-details {
-		width: calc(100% - 110px);
-		max-height: 110px;
+    .aft-main-banner-section.aft-banner-layout-3
+        .banner-vertical-slider
+        .aft-trending-posts.list-part
+        .af-double-column.list-style
+        .read-details {
+        width: calc(100% - 110px);
+        max-height: 160px;
 	}
 	.aft-main-banner-section:not(.aft-banner-layout-0) .af-trending-navcontrols-2 .slide-icon,
 	.aft-main-banner-section:not(.aft-banner-layout-0) .af-trending-navcontrols .slide-icon {
@@ -11538,11 +11539,11 @@ article.latest-posts-grid .read-title h3,
 		height: 100px;
 		max-width: 100px;
 	}
-	.aft-banner-layout-0
-		.af-main-banner-thumb-posts
-		.read-single:not(.af-cat-widget-carousel)
-		.read-details {
-		max-height: 100px;
+    .aft-banner-layout-0
+        .af-main-banner-thumb-posts
+        .read-single:not(.af-cat-widget-carousel)
+        .read-details {
+        max-height: 150px;
 		width: calc(100% - 100px);
 	}
 	.aft-banner-layout-0 .aft-editors-and-trending-part .slick-list {
