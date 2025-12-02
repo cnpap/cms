@@ -1374,7 +1374,7 @@ a:active {
 	clear: both;
 }
 .container-wrapper {
-	max-width: 1400px;
+	max-width: 920px;
 	margin: 0 auto;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -3809,7 +3809,7 @@ body.aft-default-mode footer.site-footer.data-bg .primary-footer .morenews-widge
 .af-wide-layout[class*='elementor-']
 	.af-main-banner-latest-posts.grid-layout.morenews-customizer
 	.container-wrapper {
-	max-width: 1400px;
+	max-width: 920px;
 }
 .af-wide-layout .aft-frontpage-feature-section-wrapper section,
 .af-wide-layout .aft-main-banner-section.morenews-customizer {

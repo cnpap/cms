@@ -153,7 +153,7 @@ if ($page_template !== 'page-templates/full-width.php') { ?>
           	printf(
             	esc_html__('%1$s by %2$s.', 'morenews'),
             	'<a href="https://opss.dev" target="_blank">页面建设</a>',
-            	'杨伟杰',
+            	'奕洛建筑工程',
             ); ?>
           <?php endif; ?>
         </div>

@@ -32,7 +32,7 @@ msgstr "MoreNews Pro 是一款专业的 WordPress 主题，适用于新闻、博
 
 #. Author of the theme
 msgid "AF themes"
-msgstr "杨伟杰"
+msgstr "奕洛建筑工程"
 
 #. Author URI of the theme
 msgid "https://www.afthemes.com/"
