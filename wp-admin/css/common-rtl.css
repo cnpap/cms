@@ -3830,7 +3830,7 @@ img {
 	}
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+@media only screen and (min-width: 920px) and (max-width: 1599px) {
 	.my-sites li {
 		float: right;
 		width: 16%;

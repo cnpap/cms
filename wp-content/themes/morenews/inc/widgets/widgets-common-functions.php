@@ -123,7 +123,7 @@ if (!function_exists('morenews_render_tabbed_posts')):
               aria-selected="<?php echo $is_recent_active ? 'true' : 'false'; ?>"
               data-toggle="tab"
               class="font-family-1 <?php echo $is_recent_active ? 'active' : ''; ?>">
-              <span><i class="fas fa-clock"></i> <?php echo esc_html($latest_title); ?></span>
+              <span><?php echo esc_html($latest_title); ?></span>
             </a>
           </li>
 
@@ -138,7 +138,7 @@ if (!function_exists('morenews_render_tabbed_posts')):
               aria-selected="<?php echo $is_recent_active ? 'false' : 'true'; ?>"
               data-toggle="tab"
               class="font-family-1 <?php echo $is_recent_active ? '' : 'active'; ?>">
-              <span><i class="fas fa-bolt"></i> <?php echo esc_html($popular_title); ?></span>
+              <span><?php echo esc_html($popular_title); ?></span>
             </a>
           </li>
           <li class="tab tab-update <?php echo esc_attr(
@@ -152,7 +152,7 @@ if (!function_exists('morenews_render_tabbed_posts')):
               aria-selected="<?php echo $is_recent_active ? 'false' : 'true'; ?>"
               data-toggle="tab"
               class="font-family-1 <?php echo $is_recent_active ? '' : 'active'; ?>">
-              <span><i class="fas fa-fire"></i> <?php echo esc_html($update_title); ?></span>
+              <span><?php echo esc_html($update_title); ?></span>
             </a>
           </li>
         </ul>
