@@ -1407,7 +1407,7 @@ a:active {
 }
 .container-wrapper #secondary {
 	width: 30%;
-	padding-left: 10px;
+	/* padding-left: 10px; */
 }
 body.error404 .container-wrapper #primary,
 body.full-width-content #primary,

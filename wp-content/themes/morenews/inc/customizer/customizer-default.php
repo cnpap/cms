@@ -236,7 +236,7 @@ if (!function_exists('morenews_get_default_theme_options')):
 		$defaults['list_post_date_author_setting'] = 'show-date-only';
 		$defaults['global_author_icon_gravatar_display_setting'] = 'display-icon';
 
-		$defaults['global_excerpt_length'] = 18;
+        $defaults['global_excerpt_length'] = 35;
 		$defaults['global_read_more_texts'] = __('Read More', 'morenews');
 		$defaults['global_widget_excerpt_setting'] = 'default-excerpt';
 		$defaults['global_date_display_setting'] = 'default-date';
