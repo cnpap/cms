@@ -3803,7 +3803,7 @@ body.aft-default-mode footer.site-footer.data-bg .primary-footer .morenews-widge
 	padding-left: 0;
 }
 .af-wide-layout .af-main-banner-latest-posts.grid-layout.morenews-customizer .container-wrapper {
-	max-width: 920px;
+	max-width: 960px;
 	box-sizing: border-box;
 }
 .af-wide-layout[class*='elementor-']
