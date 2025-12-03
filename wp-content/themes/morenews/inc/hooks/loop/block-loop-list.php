@@ -66,7 +66,7 @@ if (!function_exists('morenews_loop_list')):
             <?php endif; ?>
           <?php endif; ?>
 
-          <div class="read-title">
+          <div class="read-title" style="white-space: nowrap;">
             <h3>
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
