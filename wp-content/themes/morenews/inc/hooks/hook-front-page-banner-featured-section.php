@@ -11,6 +11,9 @@ if (!function_exists('morenews_banner_featured_section')):
 		?>
         <div class="aft-frontpage-feature-section-wrapper">
 
+        <div class="container-wrapper" style="margin-bottom: 20px !important; background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/dang.jpg'); ?>'); background-position: center center; background-size: contain; background-repeat: no-repeat; width: 100%; margin: 0 auto; min-height: 201px;">
+        </div>
+
             <?php
             $morenews_show_featured_section = morenews_get_option('show_featured_posts_section');
             if ($morenews_show_featured_section): ?>

@@ -1,0 +1,64 @@
+/**
+ * MoreNews Custom Style for Water Group (Enterprise Premium Edition)
+ * Version: 2.3.0
+ * Project: 国企水务集团官网重构 - 极简空气感版
+ * Focus: 极度克制、若隐若现、空气感
+ */
+
+:root {
+    /* --- 品牌色系定义 --- */
+    /* 
+       底色调整：#f9fbff
+       比之前的 #f4f7fa 更亮、更透，接近纸张的白，减少沉重感
+    */
+    --water-bg-base: #f9fbff;
+
+    /* 
+       网格颜色：rgba(0, 60, 130, 0.015)
+       从 0.05 降至 0.015，可见度降低 70%。
+       这不再是"格子"，而是"纹理"。
+    */
+    --grid-color: rgba(0, 60, 130, 0.015);
+}
+
+/* 1. 确保 body 底色正确 */
+body {
+    background-color: var(--water-bg-base) !important;
+}
+
+/* 2. 核心背景层 */
+.site.af-whole-wrapper {
+    background-color: transparent !important;
+
+    /* 
+       背景图层顺序 (保持网格在最上层，但利用极低透明度控制):
+    */
+    background-image:
+        /* Layer 1 & 2: 极淡网格 - 几乎隐形 */
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+
+        /* Layer 3: 顶部柔白光 - 增加通透呼吸感，稍微冲淡顶部的网格 */
+        linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 40%),
+
+        /* Layer 4: 右上角极微弱的行政蓝氛围 - 仅保留一丝色温 */
+        radial-gradient(circle at 90% 10%, rgba(0, 86, 179, 0.02) 0%, transparent 50%) !important;
+
+    /* 
+       背景尺寸: 保持 40px 的严谨感
+    */
+    background-size:
+        40px 40px,
+        40px 40px,
+        100% 100%,
+        100% 100% !important;
+
+    background-attachment: fixed !important;
+    background-position: center top !important;
+    background-repeat: repeat, repeat, no-repeat, no-repeat !important;
+}
+
+
+/* 布局保护：不触碰任何组件样式 */
+
+/* .morenews-customizer */

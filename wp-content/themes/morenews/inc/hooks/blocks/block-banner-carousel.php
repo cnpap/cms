@@ -130,5 +130,4 @@ $morenews_carousel_args_encoded = wp_json_encode($morenews_carousel_args);
     wp_reset_postdata();
     ?>
   </div>
-  <div class="af-main-navcontrols af-slick-navcontrols"></div>
 </div>

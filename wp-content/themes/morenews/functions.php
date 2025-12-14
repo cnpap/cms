@@ -433,6 +433,14 @@ function morenews_style_files()
 		$morenews_version,
 	);
 	wp_add_inline_style('morenews-style', morenews_custom_style());
+
+	// 定制水务集团稳重背景样式
+	wp_enqueue_style(
+		'morenews-water-style',
+		get_template_directory_uri() . '/assets/css/custom-water.css',
+		['morenews-style'],
+		filemtime(get_template_directory() . '/assets/css/custom-water.css'),
+	);
 }
 
 /**
