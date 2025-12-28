@@ -15,8 +15,7 @@
 
     /* 
        网格颜色：rgba(0, 60, 130, 0.015)
-       从 0.05 降至 0.015，可见度降低 70%。
-       这不再是"格子"，而是"纹理"。
+       保持极低透明度，不要抢夺视觉重点。
     */
     --grid-color: rgba(0, 60, 130, 0.015);
 }
@@ -38,11 +37,14 @@ body {
         linear-gradient(var(--grid-color) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
 
-        /* Layer 3: 顶部柔白光 - 增加通透呼吸感，稍微冲淡顶部的网格 */
+        /* Layer 3 (New): 顶部庄严渐变 - 使用品牌色 #1358D8，浓度 20% */
+        linear-gradient(180deg, rgba(19, 88, 216, 0.20) 0%, rgba(19, 88, 216, 0) 75%),
+
+        /* Layer 4: 顶部柔白光 - 增加通透呼吸感，稍微冲淡顶部的网格 */
         linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 40%),
 
-        /* Layer 4: 右上角极微弱的行政蓝氛围 - 仅保留一丝色温 */
-        radial-gradient(circle at 90% 10%, rgba(0, 86, 179, 0.02) 0%, transparent 50%) !important;
+        /* Layer 5: 右上角极微弱的行政蓝氛围 - 仅保留一丝色温 */
+        radial-gradient(circle at 90% 10%, rgba(19, 88, 216, 0.05) 0%, transparent 50%) !important;
 
     /* 
        背景尺寸: 保持 40px 的严谨感
@@ -51,11 +53,12 @@ body {
         40px 40px,
         40px 40px,
         100% 100%,
+        100% 100%,
         100% 100% !important;
 
     background-attachment: fixed !important;
     background-position: center top !important;
-    background-repeat: repeat, repeat, no-repeat, no-repeat !important;
+    background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat !important;
 }
 
 
